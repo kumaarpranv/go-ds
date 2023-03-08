@@ -6,10 +6,9 @@ import (
 
 func main() {
 	var minh *BSTree = NewBSTree(6)
-	var queue = make([]*Node, 0)
 	for i := 2; i < 11; i = i + 1 {
-		minh.BSTInsert(uint32(i), queue)
+		minh.BSTInsert(uint32(i))
 	}
-	PrintTree(minh.Root, queue)
-
+	//PrintTree(minh.Root)
+	minh.BSTPreorder()
 }
